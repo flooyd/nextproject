@@ -1,33 +1,42 @@
-import AcmeLogo from '@/app/ui/acme-logo';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { Button } from "./ui/button";
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col p-6">
-      <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
-        {/* <AcmeLogo /> */}
-      </div>
-      <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
-        <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
-          <p className={`text-xl text-gray-800 md:text-3xl md:leading-normal`}>
-            <strong>Welcome to Acme.</strong> This is the example for the{' '}
-            <a href="https://nextjs.org/learn/" className="text-blue-500">
-              Next.js Learn Course
-            </a>
-            , brought to you by Vercel.
-          </p>
-          <Link
-            href="/login"
-            className="flex items-center gap-5 self-start rounded-lg bg-blue-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-blue-400 md:text-base"
-          >
-            <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
-          </Link>
+    <main className="min-h-screen bg-zinc-800">
+      <nav className="min-w-screen bg-slate-50 min-h-14 flex justify-between items-center py-0 px-5">
+        <div className="text-3xl">
+          NP
         </div>
-        <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
-          {/* Add Hero Images Here */}
+        <div className="text-2xl">
+          About
         </div>
-      </div>
+      </nav>
+      <section className="p-5 text-white gap-4 min-w-screen bg-zinc-800 border-t-4 border-cyan-400">
+        <div className="flex gap-2 text-2xl">
+          <div>
+            Welcome to NP
+          </div>
+          <div>
+            -
+          </div>
+          <div>
+            The Next Project
+          </div>
+        </div>
+        <div className="my-4">
+          This is a Next.js project with Tailwind CSS, and it will be similar to &nbsp;
+          <a target="_blank" href="https://github.com/flooyd/things">Svelte App Editor</a>,
+          which can be found in my &nbsp;
+          <a target="_blank" href="https://floydportfolio.vercel.app">portfolio</a>.
+        </div>
+        <div className="my-4">
+          First, we will allow the user to create a new project, which will then assist the user in creating a flashcards app.
+        </div>
+        <div className="my-4 mb-5">
+          More advanced features such as a backend, user authentication, and a database will be added later.
+        </div>
+        <Button>Get Started</Button>
+      </section>
     </main>
   );
 }
